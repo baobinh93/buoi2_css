@@ -16,6 +16,12 @@ html{
 }
 body{
     position: relative;
+    background-color: var(--primary-color);
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin:0 auto;
 }
  /* ---- header ----- */
  .header{
@@ -23,7 +29,6 @@ body{
      padding-left: 48px;
      padding-top: 8px;
      padding-bottom: 4px;
-    
  }
  .header--logo{
  
@@ -80,9 +85,9 @@ body{
 }
 .acti--cards{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: 27px;
-   
+    flex-wrap: wrap;
 }
 .acti--card{
     width: 247px;
@@ -91,6 +96,7 @@ body{
     background-color: var(--white);
     text-align: center;
     border-radius: 16px;
+    margin-bottom: 15px;
 }
 .acti--card__img{
     height: 120px;
@@ -139,7 +145,7 @@ body{
 }
 /* ------ contact -------- */
 .contact{
-    height: 290px;
+    height: auto;
     background-color: var(--primary-color);
     padding: 12px 44px;
     background-image: url(../img/mask.png);
@@ -150,13 +156,16 @@ body{
     border-top-right-radius: 15px ;
     border-bottom-right-radius: 15px;
     margin-bottom: 75px;
+    
 }
 .contact--img img{
     height: 270px;
     width: auto;
+    display: block;
 }
+
 .contact--info{
-    padding-left: 184px;
+    padding-left: 180px;
     padding-top: 44px;
 }
 .contact--header{
@@ -171,17 +180,18 @@ body{
 .contact--icons{
     display: flex;
     color: var(--text-secondary-color);
+    flex-wrap:wrap;
 }
 .contact--icons__download,
 .contact--icons__follow{
     flex:1;
 }
-.contact--icons__follow{
-    margin-left: 12px;
+.contact--icons__download{
+    margin-right: 12px;
 }
 .download--icons{
-    display: flex;
-    justify-content: space-between;
+   display: flex;
+   justify-content: flex-start;
 }
 .download-link{
    
@@ -198,6 +208,8 @@ body{
     font-size: 18px;
 }
 .follow--icons{
+    display: flex;
+    justify-content: flex-start;
 }
 .follow--link{
     text-decoration: none;
@@ -249,4 +261,17 @@ body{
 .footer--list__item--link:hover{
     color:var(--important-color);
     transition: 0.05s linear;
+}
+
+@media ( max-width: 1023px){
+    .contact--info{
+        padding-left: 40px;
+       
+    }
+}
+@media (max-width:739px){
+    .contact--img{
+        display: none;
+    }
+    
 }
