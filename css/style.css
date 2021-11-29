@@ -155,7 +155,7 @@ body{
     display: flex;
     border-top-right-radius: 15px ;
     border-bottom-right-radius: 15px;
-    margin-bottom: 75px;
+  
     
 }
 .contact--img img{
@@ -221,23 +221,27 @@ body{
 }
 
 /* ------ footer ------ */
-
+.background-white{
+    background-color: var(--secondary-color) ;
+    padding-top: 75px;
+}
 .footer{
     background-color: var(--primary-color);
-    height: 282px;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 75px;
     padding-left: 44px;
     padding-top: 76px;
     padding-right: 32px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
-.footer--des{
-    
-}
+
 .footer--list{
     flex: 1;
     padding-right: 30px;
+    margin-bottom: 20px;
 }
 .footer--list__header{
     color: var(--text-primary-color);
@@ -273,5 +277,10 @@ body{
     .contact--img{
         display: none;
     }
-    
+    .grow-full{
+        flex-basis: 100%;
+    }
+    .activities{
+        text-align: center;
+    }
 }
